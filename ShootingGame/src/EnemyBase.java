@@ -2,7 +2,7 @@
 public class EnemyBase extends Enemy{
 	public EnemyBase(double x,double y,double vx,double vy){
 		super(x,y,vx,vy);
-		life=10+(int)GameWorld.stage/10;
+		life=10*(int)GameWorld.stage/10;
 		score=10;
 	}
 	public void move() {
@@ -20,7 +20,7 @@ public class EnemyBase extends Enemy{
 			GameWorld.enemies.add(new DropEnemy(x,y,0,GameWorld.stage));
 		}
 		if(Math.random()<0.01) {
-			GameWorld.enemies.add(new CurveEnemy(x,y,GameWorld.stage,GameWorld.stage));
+			GameWorld.enemies.add(new CurveEnemy(x,y,0,GameWorld.stage));
 		}
 	}
 	public void draw(MyFrame f){

@@ -45,6 +45,7 @@ public class GameFrame extends MyFrame{
 						break;
 					}
 				}
+				System.out.println(GameWorld.player.x);
 				sleep(0.03);
 			}
 		}
